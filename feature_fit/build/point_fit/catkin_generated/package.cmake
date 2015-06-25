@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "pcl_listener")
+set(pcl_listener_MAINTAINER "robin <robin@todo.todo>")
+set(pcl_listener_DEPRECATED "")
+set(pcl_listener_VERSION "0.0.0")
+set(pcl_listener_BUILD_DEPENDS "pcl_conversions" "libpcl-all-dev" "pcl_ros" "roscpp" "sensor_msgs")
+set(pcl_listener_RUN_DEPENDS "pcl_conversions" "libpcl-all" "pcl_ros" "roscpp" "sensor_msgs")
+set(pcl_listener_BUILDTOOL_DEPENDS "catkin")

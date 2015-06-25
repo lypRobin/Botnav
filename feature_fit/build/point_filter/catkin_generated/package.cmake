@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "point_filter")
+set(point_filter_MAINTAINER "robin <robin@todo.todo>")
+set(point_filter_DEPRECATED "")
+set(point_filter_VERSION "0.0.0")
+set(point_filter_BUILD_DEPENDS "pcl_ros" "roscpp" "libpcl-all-dev")
+set(point_filter_RUN_DEPENDS "pcl_ros" "roscpp" "libpcl-all")
+set(point_filter_BUILDTOOL_DEPENDS "catkin")

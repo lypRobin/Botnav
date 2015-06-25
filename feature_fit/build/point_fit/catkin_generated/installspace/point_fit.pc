@@ -1,0 +1,8 @@
+prefix=/home/robin/github/Botnav/feature_fit/install
+
+Name: point_fit
+Description: Description of point_fit
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robin/github/Botnav/feature_fit/install/lib 
+Requires: 

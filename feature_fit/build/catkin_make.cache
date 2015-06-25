@@ -1,0 +1,2 @@
+point_filter
+-DCATKIN_DEVEL_PREFIX=/home/robin/github/Botnav/feature_fit/devel -DCMAKE_INSTALL_PREFIX=/home/robin/github/Botnav/feature_fit/install -G Unix Makefiles
