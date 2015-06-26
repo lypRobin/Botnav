@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "keypoint_fit")
+set(keypoint_fit_MAINTAINER "robin <robin@gmail.com>")
+set(keypoint_fit_DEPRECATED "")
+set(keypoint_fit_VERSION "0.0.0")
+set(keypoint_fit_BUILD_DEPENDS "pcl_conversions" "pcl_ros" "roscpp" "libpcl-all-dev")
+set(keypoint_fit_RUN_DEPENDS "pcl_conversions" "libpcl-all" "pcl_ros" "roscpp")
+set(keypoint_fit_BUILDTOOL_DEPENDS "catkin")

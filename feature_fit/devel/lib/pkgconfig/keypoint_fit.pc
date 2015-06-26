@@ -1,0 +1,8 @@
+prefix=/home/robin/github/Botnav/feature_fit/devel
+
+Name: keypoint_fit
+Description: Description of keypoint_fit
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robin/github/Botnav/feature_fit/devel/lib 
+Requires: 

@@ -266,6 +266,12 @@ bond_DIR:PATH=/opt/ros/indigo/share/bond/cmake
 //The directory containing a CMake configuration file for bondcpp.
 bondcpp_DIR:PATH=/opt/ros/indigo/share/bondcpp/cmake
 
+//Value Computed by CMake
+capture_cloud_BINARY_DIR:STATIC=/home/robin/github/Botnav/feature_fit/build/capture_cloud
+
+//Value Computed by CMake
+capture_cloud_SOURCE_DIR:STATIC=/home/robin/github/Botnav/feature_fit/src/capture_cloud
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/indigo/share/catkin/cmake
 
@@ -317,6 +323,12 @@ gtest_force_shared_crt:BOOL=OFF
 
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
+
+//Value Computed by CMake
+keypoint_fit_BINARY_DIR:STATIC=/home/robin/github/Botnav/feature_fit/build/keypoint_fit
+
+//Value Computed by CMake
+keypoint_fit_SOURCE_DIR:STATIC=/home/robin/github/Botnav/feature_fit/src/keypoint_fit
 
 //Path to a library.
 lib:FILEPATH=/opt/ros/indigo/lib/libtf2.so
@@ -525,7 +537,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=3
+CMAKE_NUMBER_OF_LOCAL_GENERATORS:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

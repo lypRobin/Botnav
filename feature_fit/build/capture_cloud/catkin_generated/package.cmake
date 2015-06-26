@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "capture_cloud")
+set(capture_cloud_MAINTAINER "robin <robin@gmail.com>")
+set(capture_cloud_DEPRECATED "")
+set(capture_cloud_VERSION "0.0.0")
+set(capture_cloud_BUILD_DEPENDS "pcl_ros" "libpcl-all-dev" "roscpp")
+set(capture_cloud_RUN_DEPENDS "pcl_ros" "libpcl-all" "roscpp")
+set(capture_cloud_BUILDTOOL_DEPENDS "catkin")
