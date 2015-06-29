@@ -76,7 +76,7 @@ public:
         cloud_available_flag = false;
         PointCloudT::Ptr cloud (new PointCloudT);
         PointCloudT::Ptr filter_cloud(new PointCloudT);
-        PointCloudFilter filter;
+        // PointCloudFilter filter;
 
         pcl::Grabber* interface = new pcl::OpenNIGrabber();
         boost::function<void (const PointCloudT::ConstPtr&)> f = 
@@ -86,7 +86,7 @@ public:
         interface->start();
 
         pcl::visualization::PCLVisualizer viewer("PCL origin");
-        viewer.setCameraPosition(0,0,-2,0,-1,0,0);
+        viewer.setCameraPosition(0,0,-2,0,1,0,0);
 
         while(!cloud_available_flag)
            boost::this_thread::sleep(boost::posix_time::milliseconds(1));
@@ -111,19 +111,19 @@ public:
                 pcl::visualization::PointCloudColorHandlerRGBField<PointT> rgb(cloud);
                 viewer.addPointCloud<PointT> (cloud, rgb, "input_cloud");
 
-                filter.setInputCloud(cloud);
-                filter.setParameters();
-                filter.pointFilter(filter_cloud);
+                // filter.setInputCloud(cloud);
+                // filter.setParameters();
+                // filter.pointFilter(filter_cloud);
 
                 std::stringstream ss;
                 ss << "test_pointcloud_" << i << ".pcd";
-                pcl::io::savePCDFileASCII(ss.str(), *filter_cloud);
+                pcl::io::savePCDFile(ss.str(), *cloud, true);
 
                 std::cout << "Saving the No." << i << " PCD file." 
-                    << "The total points is: " << filter_cloud->points.size() << "." 
+                    << "The total points is: " << cloud->points.size() << "." 
                 << std::endl;
 
-                viewer.spinOnce(100);
+                viewer.spinOnce(1000);
 
                 cloud_mutex.unlock();
                 i++;
