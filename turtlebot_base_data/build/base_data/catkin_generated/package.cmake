@@ -1,0 +1,7 @@
+set(_CATKIN_CURRENT_PACKAGE "base_data")
+set(base_data_MAINTAINER "robin <lyp40293@gmail.com>")
+set(base_data_DEPRECATED "")
+set(base_data_VERSION "0.0.0")
+set(base_data_BUILD_DEPENDS "roscpp" "sensor_msgs" "geometry_msgs" "libpcl-all-dev")
+set(base_data_RUN_DEPENDS "libpcl-all" "roscpp" "sensor_msgs")
+set(base_data_BUILDTOOL_DEPENDS "catkin")

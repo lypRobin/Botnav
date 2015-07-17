@@ -1,0 +1,2 @@
+base_data
+-DCATKIN_DEVEL_PREFIX=/home/robin/github/Botnav/turtlebot_base_data/devel -DCMAKE_INSTALL_PREFIX=/home/robin/github/Botnav/turtlebot_base_data/install -G Unix Makefiles

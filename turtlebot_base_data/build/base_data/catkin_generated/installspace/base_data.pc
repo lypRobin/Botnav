@@ -1,0 +1,8 @@
+prefix=/home/robin/github/Botnav/turtlebot_base_data/install
+
+Name: base_data
+Description: Description of base_data
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/robin/github/Botnav/turtlebot_base_data/install/lib 
+Requires: 
