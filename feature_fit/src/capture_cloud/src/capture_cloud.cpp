@@ -86,7 +86,7 @@ public:
         interface->start();
 
         pcl::visualization::PCLVisualizer viewer("PCL origin");
-        viewer.setCameraPosition(0,0,-2,0,1,0,0);
+        viewer.setCameraPosition(0,0,-2,0,-1,0,0);
 
         while(!cloud_available_flag)
            boost::this_thread::sleep(boost::posix_time::milliseconds(1));
