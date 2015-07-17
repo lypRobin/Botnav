@@ -17,7 +17,7 @@ public:
 	BaseData()
 	{
 		cmd_vel_pub_ = cmd_nh_.advertise<geometry_msgs::Twist>("/cmd_vel_mux/input/teleop", 1);
-		
+		odom_sub_ = odom_nh_.subscribe("/odom", 1000, &BaseData::get_odometry_callback, this);
 	}
 
 	~BaseData()
@@ -43,45 +43,43 @@ public:
 
 		geometry_msgs::Twist base_cmd;
 		char cmd[50];
-		while(ros::ok())
+
+		std::cin.getline(cmd, 50);
+		if(cmd[0] != 'w' && cmd[0] != 'a' && cmd[0] != 's' && cmd[0] != 'd' && cmd[0] != 'q')
 		{
-			std::cin.getline(cmd, 50);
-			if(cmd[0] != 'w' && cmd[0] != 'a' && cmd[0] != 's' && cmd[0] != 'd' && cmd[0] != 'q')
-			{
-				std::cout << "Unknown command: " << cmd << "\n" << std::endl;
-				print_cmd();
-				continue;
-			}
-
-			// initialise
-			base_cmd.linear.x = 0;
-			base_cmd.linear.y = 0;
-			base_cmd.angular.z = 0;
-
-			// move forward
-			if(cmd[0] == 'w')
-			{
-				base_cmd.linear.x = 0.25;
-			}
-			else if(cmd[0] == 's')
-			{
-				base_cmd.linear.x = -0.25;
-			}
-			else if(cmd[0] == 'a')
-			{
-				base_cmd.angular.z = 0.75;
-				base_cmd.linear.x = 0.25;
-			}
-			else if(cmd[0] == 'd')
-			{
-				base_cmd.angular.z = -0.75;
-				base_cmd.linear.x = 0.25;
-			}
-			else if(cmd[0] == 'q')
-				break;
-
-			cmd_vel_pub_.publish(base_cmd);
+			std::cout << "Unknown command: " << cmd << "\n" << std::endl;
+			print_cmd();
+			return false;
 		}
+
+		// initialise
+		base_cmd.linear.x = 0;
+		base_cmd.linear.y = 0;
+		base_cmd.angular.z = 0;
+
+		// move forward
+		if(cmd[0] == 'w')
+		{
+			base_cmd.linear.x = 0.1;
+		}
+		else if(cmd[0] == 's')
+		{
+			base_cmd.linear.x = -0.1;
+		}
+		else if(cmd[0] == 'a')
+		{
+			base_cmd.angular.z = 0.75;
+			base_cmd.linear.x = 0.25;
+		}
+		else if(cmd[0] == 'd')
+		{
+			base_cmd.angular.z = -0.75;
+			base_cmd.linear.x = 0.25;
+		}
+		else if(cmd[0] == 'q')
+			;//break;
+
+		cmd_vel_pub_.publish(base_cmd);
 
 		return true;
 
@@ -117,22 +115,18 @@ public:
 
 	void get_odometry_data()
 	{
-		odom_sub_ = odom_nh_.subscribe("/odom", 1000, &BaseData::get_odometry_callback, this);
-		std::cout << "hello\n" << std::endl;
-		
 		ros::Rate r(1);
-		while(ros::ok())
-		{
-			ros::spinOnce();
-			r.sleep();
-		}
-			
+		ros::spinOnce();
+		r.sleep();	
 	}
 
 	void run()
 	{
-		// keyboard_control();
-		get_odometry_data();
+		while(ros::ok())
+		{
+			keyboard_control();
+			get_odometry_data();
+		}
 	}
 };
 
