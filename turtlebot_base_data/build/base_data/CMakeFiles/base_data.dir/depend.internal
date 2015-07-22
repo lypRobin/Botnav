@@ -8,7 +8,6 @@ base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o
  /opt/ros/indigo/include/geometry_msgs/Point.h
  /opt/ros/indigo/include/geometry_msgs/Pose.h
  /opt/ros/indigo/include/geometry_msgs/PoseWithCovariance.h
- /opt/ros/indigo/include/geometry_msgs/PoseWithCovarianceStamped.h
  /opt/ros/indigo/include/geometry_msgs/Quaternion.h
  /opt/ros/indigo/include/geometry_msgs/Twist.h
  /opt/ros/indigo/include/geometry_msgs/TwistWithCovariance.h

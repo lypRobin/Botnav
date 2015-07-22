@@ -7,7 +7,6 @@ base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o: /opt/ros/indigo/include/
 base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o: /opt/ros/indigo/include/geometry_msgs/Point.h
 base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o: /opt/ros/indigo/include/geometry_msgs/Pose.h
 base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o: /opt/ros/indigo/include/geometry_msgs/PoseWithCovariance.h
-base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o: /opt/ros/indigo/include/geometry_msgs/PoseWithCovarianceStamped.h
 base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o: /opt/ros/indigo/include/geometry_msgs/Quaternion.h
 base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o: /opt/ros/indigo/include/geometry_msgs/Twist.h
 base_data/CMakeFiles/base_data.dir/src/base_data.cpp.o: /opt/ros/indigo/include/geometry_msgs/TwistWithCovariance.h
